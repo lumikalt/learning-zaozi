@@ -106,14 +106,17 @@ MLIR_SPARSE_TENSOR_LEVEL_DENSE             # header: $MLIR_INSTALL_PATH/include/
 MLIR_SPARSE_TENSOR_LEVEL_LOOSE_COMPRESSED  # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/SparseTensor.h
 MLIR_SPARSE_TENSOR_LEVEL_N_OUT_OF_M        # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/SparseTensor.h
 MLIR_SPARSE_TENSOR_LEVEL_SINGLETON         # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/SparseTensor.h
-MlirDiagnosedSilenceableFailureDefiniteFailure    # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/Transform.h
-MlirDiagnosedSilenceableFailureSilenceableFailure # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/Transform.h
-MlirDiagnosedSilenceableFailureSuccess            # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/Transform.h
+MlirDiagnosedSilenceableFailureDefiniteFailure      # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/Transform.h
+MlirDiagnosedSilenceableFailureSilenceableFailure   # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/Transform.h
+MlirDiagnosedSilenceableFailureSuccess              # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/Transform.h
 MlirWalkPostOrder                             # header: $MLIR_INSTALL_PATH/include/mlir-c/IR.h
 MlirWalkPreOrder                              # header: $MLIR_INSTALL_PATH/include/mlir-c/IR.h
 MlirWalkResultAdvance                         # header: $MLIR_INSTALL_PATH/include/mlir-c/IR.h
 MlirWalkResultInterrupt                       # header: $MLIR_INSTALL_PATH/include/mlir-c/IR.h
 MlirWalkResultSkip                            # header: $MLIR_INSTALL_PATH/include/mlir-c/IR.h
+MlirSpeculatabilityNotSpeculatable                          # header: $MLIR_INSTALL_PATH/include/mlir-c/Interfaces.h
+MlirSpeculatabilityRecursivelySpeculatable                  # header: $MLIR_INSTALL_PATH/include/mlir-c/Interfaces.h
+MlirSpeculatabilitySpeculatable                             # header: $MLIR_INSTALL_PATH/include/mlir-c/Interfaces.h
 MLIR_PASS_DISPLAY_MODE_LIST       # header: $MLIR_INSTALL_PATH/include/mlir-c/Pass.h
 MLIR_PASS_DISPLAY_MODE_PIPELINE   # header: $MLIR_INSTALL_PATH/include/mlir-c/Pass.h
 MLIR_DIALECT_CONVERSION_FOLDING_MODE_AFTER_PATTERNS       # header: $MLIR_INSTALL_PATH/include/mlir-c/Rewrite.h
@@ -128,4 +131,3 @@ MLIR_GREEDY_SIMPLIFY_REGION_LEVEL_NORMAL                  # header: $MLIR_INSTAL
 MLIR_ENABLE_EXPENSIVE_PATTERN_API_CHECKS # header: $MLIR_INSTALL_PATH/include/mlir/Config/mlir-config.h
 MLIR_ENABLE_NVPTXCOMPILER                # header: $MLIR_INSTALL_PATH/include/mlir/Config/mlir-config.h
 MLIR_ENABLE_PDL_IN_PATTERNMATCH          # header: $MLIR_INSTALL_PATH/include/mlir/Config/mlir-config.h
-MLIR_ENABLE_ROCM_CONVERSIONS             # header: $MLIR_INSTALL_PATH/include/mlir/Config/mlir-config.h

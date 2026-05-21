@@ -14,6 +14,12 @@ given ExportSmtlibApi with
       callback:    String => Unit
     )(
       using arena: Arena
+    ): Unit = module.exportSMTLIB(callback, true)
+    inline def exportSMTLIB(
+      callback:    String => Unit,
+      emitReset:   Boolean
+    )(
+      using arena: Arena
     ): Unit =
       LogicalResult(
         mlirTranslateModuleToSMTLIB(
@@ -22,7 +28,8 @@ given ExportSmtlibApi with
           callback.stringToStringCallback.segment,
           MemorySegment.NULL,
           false,
-          false
+          false,
+          emitReset
         )
       )
 
@@ -31,15 +38,22 @@ given ExportSmtlibApi with
       callback:    String => Unit
     )(
       using arena: Arena
+    ): Unit = operation.exportSMTLIB(callback, true)
+    inline def exportSMTLIB(
+      callback:    String => Unit,
+      emitReset:   Boolean
+    )(
+      using arena: Arena
     ): Unit =
       LogicalResult(
-        mlirTranslateModuleToSMTLIB(
+        mlirTranslateOperationToSMTLIB(
           arena,
           operation.segment,
           callback.stringToStringCallback.segment,
           MemorySegment.NULL,
           false,
-          false
+          false,
+          emitReset
         )
       )
 end given

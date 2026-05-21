@@ -50,7 +50,7 @@ import org.llvm.mlir.CAPI.{
   mlirDictionaryAttrGetElement,
   mlirDictionaryAttrGetNumElements,
   mlirDictionaryAttrGetTypeID,
-  mlirDisctinctAttrCreate,
+  mlirDistinctAttrCreate,
   mlirFlatSymbolRefAttrGet,
   mlirFlatSymbolRefAttrGetValue,
   mlirFloatAttrDoubleGet,
@@ -239,9 +239,12 @@ given AttributeApi with
     )(
       using arena: Arena
     ) = Attribute(mlirSymbolRefAttrGetNestedReference(arena, attribute.segment, pos))
+    inline def distinctAttrCreate(
+      using arena: Arena
+    ) = Attribute(mlirDistinctAttrCreate(arena, attribute.segment))
     inline def disctinctAttrCreate(
       using arena: Arena
-    ) = Attribute(mlirDisctinctAttrCreate(arena, attribute.segment))
+    ) = attribute.distinctAttrCreate
   // Flat SymbolRef
   extension (string:    String)
     inline def flatSymbolRefAttrGet(
