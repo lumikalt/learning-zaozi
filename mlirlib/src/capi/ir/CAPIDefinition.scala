@@ -689,6 +689,9 @@ trait AttributeApi extends HasSegment[Attribute] with HasSizeOf[Attribute]:
     )(
       using arena: Arena
     ):                                              Attribute
+    inline def distinctAttrCreate(
+      using arena: Arena
+    ):                                              Attribute
     inline def disctinctAttrCreate(
       using arena: Arena
     ):                                              Attribute

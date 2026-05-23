@@ -13,10 +13,22 @@ trait ExportSmtlibApi:
     )(
       using arena: Arena
     ): Unit
+    inline def exportSMTLIB(
+      callBack:    String => Unit,
+      emitReset:   Boolean
+    )(
+      using arena: Arena
+    ): Unit
 
   extension (operation: Operation)
     inline def exportSMTLIB(
       callBack:    String => Unit
+    )(
+      using arena: Arena
+    ): Unit
+    inline def exportSMTLIB(
+      callBack:    String => Unit,
+      emitReset:   Boolean
     )(
       using arena: Arena
     ): Unit

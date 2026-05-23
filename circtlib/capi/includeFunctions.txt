@@ -228,6 +228,13 @@ llhdTimeTypeGet              # header: $CIRCT_INSTALL_PATH/include/circt-c/Diale
 llhdTypeIsARefType           # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/LLHD.h
 llhdTypeIsATimeType          # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/LLHD.h
 mlirGetDialectHandle__llhd__ # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/LLHD.h
+ltlAttrIsAClockEdgeAttr     # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/LTL.h
+ltlClockEdgeAttrGet         # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/LTL.h
+ltlClockEdgeAttrGetValue    # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/LTL.h
+ltlPropertyTypeGet          # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/LTL.h
+ltlSequenceTypeGet          # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/LTL.h
+ltlTypeIsAProperty          # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/LTL.h
+ltlTypeIsASequence          # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/LTL.h
 mlirGetDialectHandle__ltl__ # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/LTL.h
 circtMSFTAttributeIsALocationVectorAttribute # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/MSFT.h
 circtMSFTAttributeIsAPhysLocationAttribute   # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/MSFT.h
@@ -521,6 +528,7 @@ circtFirtoolOptionsSetExportModuleHierarchy                             # header
 circtFirtoolOptionsSetIgnoreReadEnableMem                               # header: $CIRCT_INSTALL_PATH/include/circt-c/Firtool/Firtool.h
 circtFirtoolOptionsSetLowerAnnotationsNoRefTypePorts                    # header: $CIRCT_INSTALL_PATH/include/circt-c/Firtool/Firtool.h
 circtFirtoolOptionsSetLowerMemories                                     # header: $CIRCT_INSTALL_PATH/include/circt-c/Firtool/Firtool.h
+circtFirtoolOptionsSetLowerToCore                                       # header: $CIRCT_INSTALL_PATH/include/circt-c/Firtool/Firtool.h
 circtFirtoolOptionsSetNoDedup                                           # header: $CIRCT_INSTALL_PATH/include/circt-c/Firtool/Firtool.h
 circtFirtoolOptionsSetNoViews                                           # header: $CIRCT_INSTALL_PATH/include/circt-c/Firtool/Firtool.h
 circtFirtoolOptionsSetOutputAnnotationFilename                          # header: $CIRCT_INSTALL_PATH/include/circt-c/Firtool/Firtool.h

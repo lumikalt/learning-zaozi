@@ -7,7 +7,7 @@ om.class @Thingy(%blue_1: i8, %blue_2: i32) -> (widget: !om.class.type<@Widget>,
   %4 = om.constant 8 : i32
   %5 = om.object @Gadget(%3, %4) : (i8, i32) -> !om.class.type<@Gadget>
 
-  %6 = om.object.field %2, [@blue_1] : (!om.class.type<@Widget>) -> i8
+  %6 = om.object.field %2["blue_1"] : (!om.class.type<@Widget>) -> i8
 
   om.class.fields {test = "fieldsAttr"} %2, %5, %blue_1, %6 : !om.class.type<@Widget>, !om.class.type<@Gadget>, i8, i8 loc("test")
 }
@@ -45,8 +45,10 @@ om.class @NestedField3() -> (foo: !om.class.type<@NestedField2>) {
 
 om.class @NestedField4() -> (result: i1) {
   %0 = om.object @NestedField3() : () -> !om.class.type<@NestedField3>
-  %1 = om.object.field %0, [@foo, @bar, @baz] : (!om.class.type<@NestedField3>) -> i1
-  om.class.fields %1 : i1
+  %1 = om.object.field %0["foo"] : (!om.class.type<@NestedField3>) -> !om.class.type<@NestedField2>
+  %2 = om.object.field %1["bar"] : (!om.class.type<@NestedField2>) -> !om.class.type<@NestedField1>
+  %3 = om.object.field %2["baz"] : (!om.class.type<@NestedField1>) -> i1
+  om.class.fields %3 : i1
 }
 
 om.class @ReferenceConstant() -> (myref: !om.ref, sym: !om.sym_ref) {
@@ -113,7 +115,7 @@ om.class @Any() -> (object: !om.any, string: !om.any) {
 
 om.class @ObjectField() -> (field: !om.any) {
   %0 = om.object @Any() : () -> !om.class.type<@Any>
-  %1 = om.object.field %0, [@object] : (!om.class.type<@Any>) -> !om.any
+  %1 = om.object.field %0["object"] : (!om.class.type<@Any>) -> !om.any
   om.class.fields %1 : !om.any
 }
 
@@ -126,9 +128,9 @@ om.class @InnerClass2(%anyListIn: !om.list<!om.any>)  -> (any_list2: !om.list<!o
 om.class @OuterClass2()  -> (om: !om.class.type<@InnerClass2>) {
   %0 = om.object @InnerClass2(%5) : (!om.list<!om.any>) -> !om.class.type<@InnerClass2>
   %1 = om.object @Any() : () -> !om.class.type<@Any>
-  %2 = om.object.field %1, [@object] : (!om.class.type<@Any>) -> !om.any
+  %2 = om.object.field %1["object"] : (!om.class.type<@Any>) -> !om.any
   %3 = om.object @Any() : () -> !om.class.type<@Any>
-  %4 = om.object.field %3, [@object] : (!om.class.type<@Any>) -> !om.any
+  %4 = om.object.field %3["object"] : (!om.class.type<@Any>) -> !om.any
   %5 = om.list_create %2, %4 : !om.any
   om.class.fields %0 : !om.class.type<@InnerClass2>
 }
@@ -136,10 +138,10 @@ om.class @OuterClass1()  -> (om: !om.any) {
   %0 = om.object @InnerClass1(%8) : (!om.list<!om.any>) -> !om.class.type<@InnerClass1>
   %1 = om.any_cast %0 : (!om.class.type<@InnerClass1>) -> !om.any
   %2 = om.object @OuterClass2() : () -> !om.class.type<@OuterClass2>
-  %3 = om.object.field %2, [@om] : (!om.class.type<@OuterClass2>) -> !om.class.type<@InnerClass2>
+  %3 = om.object.field %2["om"] : (!om.class.type<@OuterClass2>) -> !om.class.type<@InnerClass2>
   %4 = om.any_cast %3 : (!om.class.type<@InnerClass2>) -> !om.any
   %5 = om.object @OuterClass2() : () -> !om.class.type<@OuterClass2>
-  %6 = om.object.field %5, [@om] : (!om.class.type<@OuterClass2>) -> !om.class.type<@InnerClass2>
+  %6 = om.object.field %5["om"] : (!om.class.type<@OuterClass2>) -> !om.class.type<@InnerClass2>
   %7 = om.any_cast %6 : (!om.class.type<@InnerClass2>) -> !om.any
   %8 = om.list_create %4, %7 : !om.any
   om.class.fields %1 : !om.any

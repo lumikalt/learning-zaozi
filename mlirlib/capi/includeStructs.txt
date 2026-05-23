@@ -6,10 +6,11 @@ MlirAffineMap                          # header: $MLIR_INSTALL_PATH/include/mlir
 MlirDiagnostic                       # header: $MLIR_INSTALL_PATH/include/mlir-c/Diagnostics.h
 MlirLinalgContractionDimensions                # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/Linalg.h
 MlirLinalgConvolutionDimensions                # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/Linalg.h
-MlirTransformOpInterfaceCallbacks                   # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/Transform.h
-MlirTransformResults                                # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/Transform.h
-MlirTransformRewriter                               # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/Transform.h
-MlirTransformState                                  # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/Transform.h
+MlirPatternDescriptorOpInterfaceCallbacks             # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/Transform.h
+MlirTransformOpInterfaceCallbacks                     # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/Transform.h
+MlirTransformResults                                  # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/Transform.h
+MlirTransformRewriter                                 # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/Transform.h
+MlirTransformState                                    # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/Transform.h
 MlirTransformOptions                                      # header: $MLIR_INSTALL_PATH/include/mlir-c/Dialect/Transform/Interpreter.h
 MlirExecutionEngine                   # header: $MLIR_INSTALL_PATH/include/mlir-c/ExecutionEngine.h
 MlirAsmState                                    # header: $MLIR_INSTALL_PATH/include/mlir-c/IR.h
@@ -33,8 +34,9 @@ MlirSymbolTable                                 # header: $MLIR_INSTALL_PATH/inc
 MlirType                                        # header: $MLIR_INSTALL_PATH/include/mlir-c/IR.h
 MlirValue                                       # header: $MLIR_INSTALL_PATH/include/mlir-c/IR.h
 MlirIntegerSet                     # header: $MLIR_INSTALL_PATH/include/mlir-c/IntegerSet.h
-MlirMemoryEffectInstancesList                     # header: $MLIR_INSTALL_PATH/include/mlir-c/Interfaces.h
-MlirMemoryEffectsOpInterfaceCallbacks             # header: $MLIR_INSTALL_PATH/include/mlir-c/Interfaces.h
+MlirConditionallySpeculatableOpInterfaceCallbacks             # header: $MLIR_INSTALL_PATH/include/mlir-c/Interfaces.h
+MlirMemoryEffectInstancesList                                 # header: $MLIR_INSTALL_PATH/include/mlir-c/Interfaces.h
+MlirMemoryEffectsOpInterfaceCallbacks                         # header: $MLIR_INSTALL_PATH/include/mlir-c/Interfaces.h
 MlirExternalPass                    # header: $MLIR_INSTALL_PATH/include/mlir-c/Pass.h
 MlirExternalPassCallbacks           # header: $MLIR_INSTALL_PATH/include/mlir-c/Pass.h
 MlirOpPassManager                   # header: $MLIR_INSTALL_PATH/include/mlir-c/Pass.h

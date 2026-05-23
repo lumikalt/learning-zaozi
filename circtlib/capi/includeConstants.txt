@@ -26,6 +26,9 @@ FIRRTL_VALUE_FLOW_SOURCE           # header: $CIRCT_INSTALL_PATH/include/circt-c
 InOut                           # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/HW.h
 Input                           # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/HW.h
 Output                          # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/HW.h
+LTL_CLOCK_EDGE_BOTH         # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/LTL.h
+LTL_CLOCK_EDGE_NEG          # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/LTL.h
+LTL_CLOCK_EDGE_POS          # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/LTL.h
 ASC                                          # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/MSFT.h
 DESC                                         # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/MSFT.h
 NONE                                         # header: $CIRCT_INSTALL_PATH/include/circt-c/Dialect/MSFT.h
