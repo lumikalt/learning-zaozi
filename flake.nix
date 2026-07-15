@@ -53,7 +53,7 @@
         };
         devShells.default = pkgs.mkShell {
           inputsFrom = [ pkgs.zaozi.zaozi-assembly ];
-          nativeBuildInputs = with pkgs; [ nixd jdk25 ];
+          nativeBuildInputs = with pkgs; [ nixd jdk25 iverilog ];
           env = with pkgs; {
             CIRCT_INSTALL_PATH = circt-install;
             MLIR_INSTALL_PATH = mlir-install;
